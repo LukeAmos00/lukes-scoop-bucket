@@ -1,0 +1,23 @@
+{
+    "version": "1.0.0",
+    "description": "Docker Compose deployment for the self-hosted WinGetty winget repository server.",
+    "homepage": "https://github.com/thilojaeggi/WinGetty",
+    "license": "AGPL-3.0-only",
+    "notes": [
+        "Requires Docker with Compose support.",
+        "Edit $dir\\docker-compose.yml before first start if you want to change the defaults.",
+        "Start with: docker compose -f \"$dir\\docker-compose.yml\" up -d",
+        "Stop with: docker compose -f \"$dir\\docker-compose.yml\" down"
+    ],
+    "url": "https://raw.githubusercontent.com/thilojaeggi/WinGetty/v1.0.0/docker-compose.yml",
+    "hash": "9cb8621bc41b7bb9ed1df06c6066953b58d829dc52a9f82e4c92b3412e184d4a",
+    "persist": "docker-compose.yml",
+    "checkver": {
+        "github": "https://github.com/thilojaeggi/WinGetty",
+        "regex": "v([\\d.]+)",
+        "replace": "${1}"
+    },
+    "autoupdate": {
+        "url": "https://raw.githubusercontent.com/thilojaeggi/WinGetty/v$version/docker-compose.yml"
+    }
+}
