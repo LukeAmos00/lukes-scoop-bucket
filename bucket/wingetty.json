@@ -6,18 +6,38 @@
     "notes": [
         "Requires Docker with Compose support.",
         "Edit $dir\\docker-compose.yml before first start if you want to change the defaults.",
-        "Start with: docker compose -f \"$dir\\docker-compose.yml\" up -d",
-        "Stop with: docker compose -f \"$dir\\docker-compose.yml\" down"
+        "Edit $dir\\caddy-compose.yml and $dir\\Caddyfile before first start to configure HTTPS.",
+        "Trust the Caddy-issued certificate authority on winget clients, or replace the default config with a publicly trusted certificate.",
+        "Start WinGetty with: docker compose -f \"$dir\\docker-compose.yml\" up -d",
+        "Start the HTTPS proxy with: docker compose -f \"$dir\\caddy-compose.yml\" up -d",
+        "Stop WinGetty with: docker compose -f \"$dir\\docker-compose.yml\" down",
+        "Stop the HTTPS proxy with: docker compose -f \"$dir\\caddy-compose.yml\" down"
     ],
-    "url": "https://raw.githubusercontent.com/thilojaeggi/WinGetty/v1.0.0/docker-compose.yml",
-    "hash": "9cb8621bc41b7bb9ed1df06c6066953b58d829dc52a9f82e4c92b3412e184d4a",
-    "persist": "docker-compose.yml",
+    "url": [
+        "https://raw.githubusercontent.com/thilojaeggi/WinGetty/v1.0.0/docker-compose.yml",
+        "https://raw.githubusercontent.com/LukeAmos00/lukes-scoop-bucket/main/scripts/wingetty/caddy-compose.yml",
+        "https://raw.githubusercontent.com/LukeAmos00/lukes-scoop-bucket/main/scripts/wingetty/Caddyfile"
+    ],
+    "hash": [
+        "9cb8621bc41b7bb9ed1df06c6066953b58d829dc52a9f82e4c92b3412e184d4a",
+        "4ade612c7bfd1bfb52138f5a2498f1014433d0a07a5f024573869f1cfcf80d44",
+        "dbc5582b654ffe51d436f8eff457f1819b20ef06b2affcdb024aa44baf5fb52a"
+    ],
+    "persist": [
+        "docker-compose.yml",
+        "caddy-compose.yml",
+        "Caddyfile"
+    ],
     "checkver": {
         "github": "https://github.com/thilojaeggi/WinGetty",
         "regex": "v([\\d.]+)",
         "replace": "${1}"
     },
     "autoupdate": {
-        "url": "https://raw.githubusercontent.com/thilojaeggi/WinGetty/v$version/docker-compose.yml"
+        "url": [
+            "https://raw.githubusercontent.com/thilojaeggi/WinGetty/v$version/docker-compose.yml",
+            "https://raw.githubusercontent.com/LukeAmos00/lukes-scoop-bucket/main/scripts/wingetty/caddy-compose.yml",
+            "https://raw.githubusercontent.com/LukeAmos00/lukes-scoop-bucket/main/scripts/wingetty/Caddyfile"
+        ]
     }
 }
