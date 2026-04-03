@@ -6,10 +6,10 @@
     "bin": "NegativeScreen.exe",
     "hash": "0587e8f7df30b242f554894e35d8eb77d0eec4175d783d811b0134430c1977d4",
     "shortcuts": [
-    ["NegativeScreen.exe", "NegativeScreen"]
+        ["NegativeScreen.exe", "NegativeScreen"]
     ],
     "checkver": {
-        "github": "mlaily/NegativeScreen",
+        "github": "https://github.com/mlaily/NegativeScreen",
         "regex": "Release_([\\d.]+)"
     },
     "autoupdate": {
