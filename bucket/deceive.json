@@ -9,7 +9,7 @@
         ["Deceive.exe", "Deceive"]
     ],
     "checkver": {
-        "github": "molenzwiebel/Deceive"
+        "github": "https://github.com/molenzwiebel/Deceive"
     },
     "autoupdate": {
         "url": "https://github.com/molenzwiebel/Deceive/releases/download/v$version/Deceive.exe"
