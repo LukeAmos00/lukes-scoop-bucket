@@ -1,12 +1,15 @@
 {
     "license": "GPL-3.0-only",
-    "url": "https://github.com/molenzwiebel/Deceive/releases/download/v1.16.0/Deceive.exe",
+    "url": "https://github.com/molenzwiebel/Deceive/releases/download/v1.17.0/Deceive.exe",
     "homepage": "https://github.com/molenzwiebel/Deceive",
-    "version": "1.16.0",
+    "version": "1.17.0",
     "bin": "Deceive.exe",
-    "hash": "d2e492cc2d45a0f112a21a489c86ea7a7f35f9ad204013b0b62f3b89dd79d770",
+    "hash": "106a6803d8d14ae6f3943ae7ca51ad4b23651b152c4952daa90fd71884f25c8b",
     "shortcuts": [
-        ["Deceive.exe", "Deceive"]
+        [
+            "Deceive.exe",
+            "Deceive"
+        ]
     ],
     "checkver": {
         "github": "https://github.com/molenzwiebel/Deceive"
